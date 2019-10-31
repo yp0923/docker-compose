@@ -7,8 +7,8 @@
 		"platform": "linux",
 		"logo": "https://raw.githubusercontent.com/willxiang/code-note/master/img/kdm-vzdb.png",
 		"repository": {
-			"url": "",
-			"stackfile": ""
+			"url": "https://github.com/yp0923/docker-compose",
+			"stackfile": "docker-compose-rtdb.yml"
 		},
 		"env": [
 			{
@@ -70,8 +70,8 @@
 		"platform": "linux",
 		"logo": "https://raw.githubusercontent.com/willxiang/code-note/master/img/kdm-vzdb.png",
 		"repository": {
-			"url": "",
-			"stackfile": ""
+			"url": "https://github.com/yp0923/docker-compose",
+			"stackfile": "docker-compose-vzdb.yml"
 		},
 		"env": [
 			{
