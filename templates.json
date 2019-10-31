@@ -1,0 +1,101 @@
+[
+	{
+		"type": 3,
+		"title": "kdm-rdb-rtdb-vzdb",
+		"description": "读取点至数据",
+		"categories": ["oge"],
+		"platform": "linux",
+		"logo": "https://raw.githubusercontent.com/willxiang/code-note/master/img/kdm-vzdb.png",
+		"repository": {
+			"url": "",
+			"stackfile": ""
+		},
+		"env": [
+			{
+				"name": "server_port",
+				"label": "服务端口",
+				"description": "本服务的HTTP端口号",
+				"default": "8040"
+			},
+			{
+				"name": "reg_server",
+				"label": "Consul服务",
+				"description": "选择需要连接的Consul集群服务"
+			},
+			{
+				"name": "rtdb_rule",
+				"label: "与库无关编码规则",
+				"description": "该实时库所能处理的KKS编码规则,如：^EB000.{24}[^C].{3}$",
+				"default": "^.{29}[^C].{3}$"
+			},
+			{
+				"name": "rtdb_server",
+				"label": "实时库",
+				"description": "选择需要连接的VZDB实时库",
+			},
+			{
+				"name": "rtdb_port",
+				"label": "实时库端口号",
+				"description": "数据VZDB数据库的端口号",
+			},
+			{
+				"name": "rtdb_username",
+				"label": "实时库用户名",
+				"description": "数据VZDB数据库的用户名",
+				"default": "root"
+			},
+			{
+				"name": "rtdb_password",
+				"label": "数据库密码",
+				"description": "数据VZDB数据库的密码",
+				"default": "root1234"
+			},
+			{
+				"name": "vzdb_name",
+				"label": "vzdb_name",
+				"description": "vzdb_name"
+			},
+			{
+				"name": "networks-name",
+				"label": "networks-name",
+				"description": "networks-name"
+			}
+		]
+	},
+	{
+		"type": 3,
+		"title": "vzdb",
+		"description": "数据源",
+		"categories": ["oge"],
+		"platform": "linux",
+		"logo": "https://raw.githubusercontent.com/willxiang/code-note/master/img/kdm-vzdb.png",
+		"repository": {
+			"url": "",
+			"stackfile": ""
+		},
+		"env": [
+			{
+				"name": "vzdb_port",
+				"label": "vzdb端口号",
+				"description": "vzdb服务监听的端口号",
+				"default": "22235"
+			},
+			{
+				"name": "vzevt_port",
+				"label": "vzdb端口号",
+				"description": "vzevt服务监听的端口号",
+				"default": "22136"
+			},
+			{
+				"name": "vzdb_name",
+				"label": "vzdb_name",
+				"description": "vzdb_name"
+			},
+			{
+				"name": "networks-name",
+				"label": "networks-name",
+				"description": "networks-name"
+			}
+		]
+	}
+]
