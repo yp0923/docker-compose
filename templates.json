@@ -31,12 +31,12 @@
 			{
 				"name": "rtdb_server",
 				"label": "实时库",
-				"description": "选择需要连接的VZDB实时库",
+				"description": "选择需要连接的VZDB实时库"
 			},
 			{
 				"name": "rtdb_port",
 				"label": "实时库端口号",
-				"description": "数据VZDB数据库的端口号",
+				"description": "数据VZDB数据库的端口号"
 			},
 			{
 				"name": "rtdb_username",
