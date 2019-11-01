@@ -1,91 +1,91 @@
 [
-	{
-		"type": 3,
-		"title": "kdm-rdb-rtdb-vzdb",
-		"description": "读取点至数据",
-		"categories": ["oge"],
-		"platform": "linux",
-		"logo": "https://raw.githubusercontent.com/willxiang/code-note/master/img/kdm-vzdb.png",
-		"repository": {
-			"url": "https://github.com/yp0923/docker-compose",
-			"stackfile": "docker-compose-rtdb.yml"
-		},
-		"env": [
-			{
-				"name": "server_port",
-				"label": "服务端口",
-				"description": "本服务的HTTP端口号",
-				"default": "8040"
-			},
-			{
-				"name": "reg_server",
-				"label": "Consul服务",
-				"description": "选择需要连接的Consul集群服务"
-			},
-			{
-				"name": "rtdb_rule",
-				"label": "与库无关编码规则",
-				"description": "该实时库所能处理的KKS编码规则,如：^EB000.{24}[^C].{3}$",
-				"default": "^.{29}[^C].{3}$"
-			},
-			{
-				"name": "rtdb_server",
-				"label": "实时库",
-				"description": "选择需要连接的VZDB实时库"
-			},
-			{
-				"name": "rtdb_port",
-				"label": "实时库端口号",
-				"description": "数据VZDB数据库的端口号"
-			},
-			{
-				"name": "rtdb_username",
-				"label": "实时库用户名",
-				"description": "数据VZDB数据库的用户名",
-				"default": "root"
-			},
-			{
-				"name": "rtdb_password",
-				"label": "数据库密码",
-				"description": "数据VZDB数据库的密码",
-				"default": "root1234"
-			},
-			{
-				"name": "vzdb_name",
-				"label": "vzdb_name",
-				"description": "vzdb_name"
-			}
-		]
+  {
+	"type":3,
+	"title":"rtdb-vzdb",
+	"description":"rtdb-vzdb",
+	"categories":["oge"],
+	"platform":"linux",
+	"logo":"https://raw.githubusercontent.com/willxiang/code-note/master/img/kdm-vzdb.png",
+	"repository": {
+      "url": "https://github.com/hy0709/docker-compose",
+      "stackfile": "docker-compose-rtdb.yml"
+    },
+    "env": [
+      {
+        "name": "rtdb_vzdb_port",
+        "label": "rtdb_vzdb_port",
+        "description": "rtdb_vzdb_port 端口",
+		"default":"8040"
+      },
+	  {
+        "name": "server_name",
+        "label": "服务名称",
+        "description": "与库无关信息：如桐子林的vzdb与库无关--写成 vzdb_tzl(不得含有中文) "
+      },
+	  {
+        "name": "rtdb_username",
+        "label": "vzdb用户名",
+        "description": "Password used by the MySQL root user.",
+		"default":"root"
+      },
+	  {
+        "name": "rtdb_password",
+        "label": "vzdb密码",
+        "description": "Password used by the MySQL root user.",
+		"default":"root1234"
+      },
+	  {
+        "name": "rtdb_rule",
+        "label": "与库无关编码规则",
+        "description": "该实时库所能处理的KKS编码规则，如：^EB000.{24}[^C].{3}$",
+		"default":"^.{29}[^C].{3}$"
+      },
+	  {
+        "name": "vzdb_name",
+        "label": "vzdb_name",
+        "description": "vzdb_name"
+      },
+	  {
+        "name": "networks-name",
+        "label": "networks-name",
+        "description": "networks-name"
+      }
+    ]
 	},
 	{
-		"type": 3,
-		"title": "vzdb",
-		"description": "数据源",
-		"categories": ["oge"],
-		"platform": "linux",
-		"logo": "https://raw.githubusercontent.com/willxiang/code-note/master/img/kdm-vzdb.png",
-		"repository": {
-			"url": "https://github.com/yp0923/docker-compose",
-			"stackfile": "docker-compose-vzdb.yml"
-		},
-		"env": [
-			{
-				"name": "vzdb_port",
-				"label": "vzdb端口号",
-				"description": "vzdb服务监听的端口号",
-				"default": "22235"
-			},
-			{
-				"name": "vzevt_port",
-				"label": "vzdb端口号",
-				"description": "vzevt服务监听的端口号",
-				"default": "22136"
-			},
-			{
-				"name": "vzdb_name",
-				"label": "vzdb_name",
-				"description": "vzdb_name"
-			}
-		]
+	"type":3,
+	"title":"vzdb",
+	"description":"数据源",
+	"categories":["oge"],
+	"platform":"linux",
+	"logo":"https://raw.githubusercontent.com/willxiang/code-note/master/img/kdm-vzdb.png",
+	"repository": {
+      "url": "https://github.com/hy0709/docker-compose",
+      "stackfile": "docker-compose-vzdb.yml"
+    },
+    "env": [
+	  {
+        "name": "vzdb_port",
+        "label": "vzdb_port",
+        "description": "vzdb_port",
+		"default":"22235"
+      },
+	  {
+        "name": "vzevt_port",
+        "label": "vzevt_port",
+        "description": "vzevt_port",
+		"default":"22136"
+      },
+	  {
+        "name": "vzdb_name",
+        "label": "vzdb_name",
+        "description": "vzdb_name"
+      },
+	  {
+        "name": "networks-name",
+        "label": "networks-name",
+        "description": "networks-name"
+      }
+    ]
 	}
 ]

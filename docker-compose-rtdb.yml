@@ -1,20 +1,21 @@
 version: "3.7"
-service:
-    rtdb:
-        image: oge/kdm-rtdb-vzdb:1.2.0
-        ports:
-            - ${reg_server}:regHost
-            - ${rtdb_server}:rtdbHost
-        environment:
-            spring.application.name: kdm-rdp-rtdb-vzdb-${server_name}
-            spring.profiles.active: reg_consul,alias_none
-            kdm.reg.host: regHost
-            kdm.rtdb.host: rtdbHost
-            kdm.rtdb.port: ${rtdb_port}
-            kdm.rtdb.username: ${rtdb_username}
-            kdm.rtdb.password: ${rtdb_password}
-            kdm.rtdb.rule: ${rtdb_rule}
-        volumes:
-            - /home/oge/oge_logs/kdm-rdp-rtdb-vzdb-${server_port}/:/oge/log
-            - /etc/localtime:/etc/localtime:ro
-        container_name: kdm-rdp-rtdb-vzdb-${server_port}
+services:
+  rtdb:
+    image: oge/kdm-rtdb-vzdb:1.2.0
+    ports:
+      - "8041:8040"
+    environment:
+      spring.application.name: kdm-rdp-rtdb-vzdb-${server_name}
+      kdm.rtdb.host: vzdb-${vzdb_name} 
+      kdm.rtdb.port: 22235
+      kdm.rtdb.username: ${rtdb_username}
+      kdm.rtdb.password: ${rtdb_password}
+      kdm.rtdb.rule: ${rtdb_rule}
+    volumes:
+      - "/home/oge/oge_logs/kdm-rdp-rtdb-vzdb-${rtdb_vzdb_port}/:/oge/log"
+      - "/etc/localtime:/etc/localtime:ro"
+    container_name: kdm-rdp-rtdb-vzdb-${rtdb_vzdb_port}
+
+networks:
+  default:
+    name: ${networks_name}
